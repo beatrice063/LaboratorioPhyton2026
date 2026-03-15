@@ -23,6 +23,19 @@ main():
 print(result)
 
 
+def intero_positivo(n):
+    while True:
+        n = int(input("Immetti un numero intero positivo: "))
+        if n <= 0:
+            print("Inserimento non valido")
+            n = int(input("Immetti un numero intero positivo: "))
+        yield n
+        
+
+
+
+
+
 
 
 

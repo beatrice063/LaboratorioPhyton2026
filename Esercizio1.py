@@ -34,10 +34,6 @@ def intero_positivo():
 
 #####
 
-a = intero_positivo()
-print(next(g))
-
-
 
 def sequenza(n):
     lista = []
@@ -68,6 +64,20 @@ def analizza_sequenza(lista):
     return massimo, lunghezza, somma 
 
 #####
+
+def ricerca(lista):
+    divisibili = False
+    for numero in lista:
+        if numero % 5 == 0:
+            print(numero)
+            divisibili = True
+    if not divisibili:
+        print("non ci sono numeri divisibili per 5 in questa sequenza")
+
+
+#####
+
+
 
  
 

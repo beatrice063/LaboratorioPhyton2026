@@ -68,6 +68,7 @@ def analizza_sequenza(lista):
     return massimo, lunghezza, somma 
 
 #####
+
  
 
 

@@ -10,30 +10,16 @@ def is_pari(n):
     return risultato
 
 #####
-
-main():
-    numero = int( input ('Dammi un numero:') )
-
-    #print(type(numero))
-
-    result = is_pari(numero)
-
-    print(result)
-
-print(result)
-
-
-
 def intero_positivo():
     while True:
         n = int(input("Immetti un numero intero positivo: "))
         if n <= 0:
             print("Inserimento non valido")
             n = int(input("Immetti un numero intero positivo: "))
-        yield n
+        else: 
+            return n
 
 #####
-
 
 def sequenza(n):
     lista = []
@@ -43,13 +29,10 @@ def sequenza(n):
             n = n // 2
         else:
             n = (n * 3) + 1
-
-     lista.append(n)
-     return lista
+    lista.append(n)
+    return lista
 
 #####
-
-
 
 def analizza_sequenza(lista):
     massimo = lista[0]
@@ -61,14 +44,17 @@ def analizza_sequenza(lista):
             massimo = numero
         somma = somma +numero
         lunghezza = lunghezza + 1 
-    return massimo, lunghezza, somma 
+    tupla=(massimo, lunghezza, somma)
+    return tupla
 
 #####
 
 def ricerca(lista):
     divisibili = False
+    print("numeri divisibili per 5:\n")
     for numero in lista:
         if numero % 5 == 0:
+            
             print(numero)
             divisibili = True
     if not divisibili:
@@ -76,6 +62,32 @@ def ricerca(lista):
 
 
 #####
+
+def main():
+    
+    #numero = int( input ('Dammi un numero:') )
+    #intero_positivo(numero)
+    numero = intero_positivo()
+    
+    #print(type(numero))
+
+    result = is_pari(numero)
+    lista = sequenza(numero)
+    print(result)
+    print(lista)
+    (massimo,lunghezza,somma)=analizza_sequenza(lista)
+    print(massimo)
+    print(lunghezza)
+    print(somma)
+    ricerca(lista)
+main()
+
+
+
+
+
+
+
 
 
 

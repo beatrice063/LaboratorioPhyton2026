@@ -1,0 +1,1020 @@
+Esercizi del corso di Laboratorio di Programmazione Python
+
+MODIFICA
+>>> >>> ['Raffaello', 'Donatello', 'Michelangelo', 'L', 'e', 'o', 'n', 'a', 'r', 'd', 'o']
+  File "<stdin>", line 1
+    >>> ['Raffaello', 'Donatello', 'Michelangelo', 'L', 'e', 'o', 'n', 'a', 'r', 'd', 'o']
+    ^^
+SyntaxError: invalid syntax
+>>> ['Raffaello', 'Donatello', 'Michelangelo', 'L', 'e', 'o', 'n', 'a', 'r', 'd', 'o']
+['Raffaello', 'Donatello', 'Michelangelo', 'L', 'e', 'o', 'n', 'a', 'r', 'd', 'o']
+>>> >>> >>> numeri = [1, 2, 3]
+  File "<stdin>", line 1
+    >>> >>> numeri = [1, 2, 3]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> numeri = [1, 2, 3]
+  File "<stdin>", line 1
+    >>> numeri = [1, 2, 3]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> numeri.extend( 4 )
+  File "<stdin>", line 1
+    >>> >>> numeri.extend( 4 )
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> numeri.extend( 4 )
+  File "<stdin>", line 1
+    >>> numeri.extend( 4 )
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> Traceback (most recent call last):
+  File "<stdin>", line 1
+    >>> Traceback (most recent call last):
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     Traceback (most recent call last):
+  File "<stdin>", line 1
+    Traceback (most recent call last):
+IndentationError: unexpected indent
+>>>                ^^^^^^^^^^^
+  File "<stdin>", line 1
+    ^^^^^^^^^^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax. Perhaps you forgot a comma?
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax. Perhaps you forgot a comma?
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>>   File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1
+    >>>   File "<stdin>", line 1, in <module>
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1
+    File "<stdin>", line 1, in <module>
+IndentationError: unexpected indent
+>>> IndentationError: unexpected indent
+  File "<stdin>", line 1
+    IndentationError: unexpected indent
+                                 ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> TypeError: 'int' object is not iterable
+  File "<stdin>", line 1
+    >>> TypeError: 'int' object is not iterable
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     TypeError: 'int' object is not iterable
+  File "<stdin>", line 1
+    TypeError: 'int' object is not iterable
+IndentationError: unexpected indent
+>>>                      ^^^^^^
+  File "<stdin>", line 1
+    ^^^^^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> numeri
+  File "<stdin>", line 1
+    >>> >>> numeri
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> numeri
+  File "<stdin>", line 1
+    >>> numeri
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> [1, 2, 3]
+  File "<stdin>", line 1
+    >>> [1, 2, 3]
+    ^^
+SyntaxError: invalid syntax
+>>> [1, 2, 3]
+[1, 2, 3]
+>>> >>> >>> tartarughe = ["Raffaello", "Donatello"]
+  File "<stdin>", line 1
+    >>> >>> tartarughe = ["Raffaello", "Donatello"]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+> git status
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> tartarughe = ["Raffaello", "Donatello"]
+  File "<stdin>", line 1
+    >>> tartarughe = ["Raffaello", "Donatello"]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> nuove_tartarughe = ["Michelangelo", "Leonardo"]
+  File "<stdin>", line 1
+    >>> >>> nuove_tartarughe = ["Michelangelo", "Leonardo"]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> nuove_tartarughe = ["Michelangelo", "Leonardo"]
+  File "<stdin>", line 1
+    >>> nuove_tartarughe = ["Michelangelo", "Leonardo"]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> tartarughe + nuove_tartarughe
+  File "<stdin>", line 1
+    >>> >>> tartarughe + nuove_tartarughe
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> tartarughe + nuove_tartarughe
+  File "<stdin>", line 1
+    >>> tartarughe + nuove_tartarughe
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> ['Raffaello', 'Donatello', 'Michelangelo', 'Leonardo']
+  File "<stdin>", line 1
+    >>> ['Raffaello', 'Donatello', 'Michelangelo', 'Leonardo']
+    ^^
+SyntaxError: invalid syntax
+>>> ['Raffaello', 'Donatello', 'Michelangelo', 'Leonardo']
+['Raffaello', 'Donatello', 'Michelangelo', 'Leonardo']
+>>> >>> >>> tartarughe = ["Raffaello", "Donatello"]
+  File "<stdin>", line 1
+    >>> >>> tartarughe = ["Raffaello", "Donatello"]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> tartarughe = ["Raffaello", "Donatello"]
+  File "<stdin>", line 1
+    >>> tartarughe = ["Raffaello", "Donatello"]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> tartarughe * 3
+  File "<stdin>", line 1
+    >>> >>> tartarughe * 3
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> tartarughe * 3
+  File "<stdin>", line 1
+    >>> tartarughe * 3
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> ['Raffaello', 'Donatello', 'Raffaello', 'Donatello', 'Raffaello', 'Donatello']
+  File "<stdin>", line 1
+    >>> ['Raffaello', 'Donatello', 'Raffaello', 'Donatello', 'Raffaello', 'Donatello']
+    ^^
+SyntaxError: invalid syntax
+>>> ['Raffaello', 'Donatello', 'Raffaello', 'Donatello', 'Raffaello', 'Donatello']
+['Raffaello', 'Donatello', 'Raffaello', 'Donatello', 'Raffaello', 'Donatello']
+>>> >>> >>> ibra = ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+  File "<stdin>", line 1
+    >>> >>> ibra = ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> ibra = ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+  File "<stdin>", line 1
+    >>> ibra = ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> type(ibra)
+  File "<stdin>", line 1
+    >>> >>> type(ibra)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> type(ibra)
+  File "<stdin>", line 1
+    >>> type(ibra)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> <class 'tuple'>
+  File "<stdin>", line 1
+    >>> <class 'tuple'>
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     <class 'tuple'>
+  File "<stdin>", line 1
+    <class 'tuple'>
+IndentationError: unexpected indent
+>>>     ^
+  File "<stdin>", line 1
+    ^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> print(ibra)
+  File "<stdin>", line 1
+    >>> >>> print(ibra)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> print(ibra)
+  File "<stdin>", line 1
+    >>> print(ibra)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+  File "<stdin>", line 1
+    >>> ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+    ^^
+SyntaxError: invalid syntax
+>>> ('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+('Zlatan', 'Ibrahimovic', 11, 'Milan', 1.95, 95, 'Attaccante')
+>>> >>> >>> out_2 = tuple('Zlatan')
+  File "<stdin>", line 1
+    >>> >>> out_2 = tuple('Zlatan')
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> out_2 = tuple('Zlatan')
+  File "<stdin>", line 1
+    >>> out_2 = tuple('Zlatan')
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> type(out_2)
+  File "<stdin>", line 1
+    >>> >>> type(out_2)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> type(out_2)
+  File "<stdin>", line 1
+    >>> type(out_2)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> <class 'tuple'>
+  File "<stdin>", line 1
+    >>> <class 'tuple'>
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     <class 'tuple'>
+  File "<stdin>", line 1
+    <class 'tuple'>
+IndentationError: unexpected indent
+>>>     ^
+  File "<stdin>", line 1
+    ^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> print(out_2)
+  File "<stdin>", line 1
+    >>> >>> print(out_2)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> print(out_2)
+  File "<stdin>", line 1
+    >>> print(out_2)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> ('Z', 'l', 'a', 't', 'a', 'n')
+  File "<stdin>", line 1
+    >>> ('Z', 'l', 'a', 't', 'a', 'n')
+    ^^
+SyntaxError: invalid syntax
+>>> ('Z', 'l', 'a', 't', 'a', 'n')
+('Z', 'l', 'a', 't', 'a', 'n')
+>>> >>> >>> # IL terzo elemento di questa tupla è una tupla
+  File "<stdin>", line 1
+    >>> >>> # IL terzo elemento di questa tupla è una tupla
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> # IL terzo elemento di questa tupla è una tupla
+  File "<stdin>", line 1
+    >>> # IL terzo elemento di questa tupla è una tupla
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> tupla_tuple = (11, 'Zlatan', (1.95, 95))   
+  File "<stdin>", line 1
+    >>> >>> tupla_tuple = (11, 'Zlatan', (1.95, 95))   
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> tupla_tuple = (11, 'Zlatan', (1.95, 95))   
+  File "<stdin>", line 1
+    >>> tupla_tuple = (11, 'Zlatan', (1.95, 95))   
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> print(tupla_tuple)
+  File "<stdin>", line 1
+    >>> >>> print(tupla_tuple)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> print(tupla_tuple)
+  File "<stdin>", line 1
+    >>> print(tupla_tuple)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> (11, 'Zlatan', (1.95, 95))
+  File "<stdin>", line 1
+    >>> (11, 'Zlatan', (1.95, 95))
+    ^^
+SyntaxError: invalid syntax
+>>> (11, 'Zlatan', (1.95, 95))
+(11, 'Zlatan', (1.95, 95))
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> a = [1, 2]
+  File "<stdin>", line 1
+    >>> >>> a = [1, 2]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> a = [1, 2]
+  File "<stdin>", line 1
+    >>> a = [1, 2]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> type(a)
+  File "<stdin>", line 1
+    >>> >>> type(a)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> type(a)
+  File "<stdin>", line 1
+    >>> type(a)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> <class 'list'>
+  File "<stdin>", line 1
+    >>> <class 'list'>
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     <class 'list'>
+  File "<stdin>", line 1
+    <class 'list'>
+IndentationError: unexpected indent
+>>>     ^
+  File "<stdin>", line 1
+    ^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> type [a]
+  File "<stdin>", line 1
+    >>> >>> type [a]
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> type [a]
+  File "<stdin>", line 1
+    >>> type [a]
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> type[[1, 2]]
+  File "<stdin>", line 1
+    >>> type[[1, 2]]
+    ^^
+SyntaxError: invalid syntax
+>>> type[[1, 2]]
+type[[1, 2]]
+>>> >>> >>> type (a)
+  File "<stdin>", line 1
+    >>> >>> type (a)
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> type (a)
+  File "<stdin>", line 1
+    >>> type (a)
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> <class 'list'>
+  File "<stdin>", line 1
+    >>> <class 'list'>
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     <class 'list'>
+  File "<stdin>", line 1
+    <class 'list'>
+IndentationError: unexpected indent
+>>>     ^
+  File "<stdin>", line 1
+    ^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+  File "<stdin>", line 1
+    >>> >>> 
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> 
+  File "<stdin>", line 1
+    >>> 
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> git status
+  File "<stdin>", line 1
+    >>> >>> git status
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     >>> git status
+  File "<stdin>", line 1
+    >>> git status
+IndentationError: unexpected indent
+>>>     ^^
+  File "<stdin>", line 1
+    ^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    >>>   File "<stdin>", line 1
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>> IndentationError: unexpected indent
+  File "<stdin>", line 1
+    IndentationError: unexpected indent
+                                 ^^^^^^
+SyntaxError: invalid syntax
+>>> >>>     git status
+  File "<stdin>", line 1
+    >>>     git status
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     git status
+  File "<stdin>", line 1
+    git status
+IndentationError: unexpected indent
+>>> IndentationError: unexpected indent
+  File "<stdin>", line 1
+    IndentationError: unexpected indent
+                                 ^^^^^^
+SyntaxError: invalid syntax
+>>> >>>         ^^^^^^
+  File "<stdin>", line 1
+    >>>         ^^^^^^
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     ^^^^^^
+  File "<stdin>", line 1
+    ^^^^^^
+IndentationError: unexpected indent
+>>> IndentationError: unexpected indent
+  File "<stdin>", line 1
+    IndentationError: unexpected indent
+                                 ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    >>> SyntaxError: invalid syntax
+    ^^
+SyntaxError: invalid syntax
+>>>   File "<stdin>", line 1
+  File "<stdin>", line 1
+    File "<stdin>", line 1
+IndentationError: unexpected indent
+>>>     SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+IndentationError: unexpected indent
+>>>                          ^^^^^^
+  File "<stdin>", line 1
+    ^^^^^^
+IndentationError: unexpected indent
+>>> SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    SyntaxError: invalid syntax
+                         ^^^^^^
+SyntaxError: invalid syntax
+>>> >>> >>> 
+git status

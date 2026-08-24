@@ -1,9 +1,11 @@
 
 #NOME: Esercizio2
 #AUTORE: Beatrice Zavattin
-#DATA:
+#DATA:01/04/2026
 #VERSIONE: 1.0 
-#DESCRIOZIONE: 
+#DESCRIOZIONE:Esercizio di analisi e manipolazione testuale su un estratto poetico: conta righe/parole/caratteri. 
+#Effettua sostituzioni e trasformazioni (maiuscole, inversioni), trova parole comuni tra strofe e costruisce dizionari di frequenza.
+#Applica stringhe, liste, set, dizionari e funzioni usando solo tecniche di base. 
 
 
 
@@ -37,11 +39,15 @@ punteggiatura = ",.;:!?'\""
 lettere_valide = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 
+#Definisco una funzione che toglie la punteggiatura solo ai bordi di una parola
+#Il primo while sposta inizio in avanti finché il carattere in quella posizione è punteggiatura
+#Il secondo while sposta fine all'indietro finché l'ultimo carattere è punteggiatura
+#ultima str restituisce solo la parte "pulita", usando lo slicing.
 def pulisci_parola(parola):
     """Toglie punteggiatura solo a inizio/fine parola, non nel mezzo."""
     inizio = 0
     fine = len(parola)
-    while inizio < fine and parola[inizio] in punteggiatura:
+    while inizio < fine and parola[inizio] in punteggiatura: 
         inizio += 1
     while fine > inizio and parola[fine - 1] in punteggiatura:
         fine -= 1

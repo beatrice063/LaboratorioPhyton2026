@@ -2,6 +2,8 @@
 #NOME: Esercizio1esame.py
 #AUTORE: Zavattin Beatrice
 #VERSIONE: 1.0
+#DATA:
+#DESCRIZIONE:
 
 
 
@@ -20,7 +22,7 @@ def genera_numero():
 
 
 def genera_sequenza(numero):
-    """Genera la lista della sequenza secondo la regola di Collatz."""
+    """Genera la lista della sequenza."""
     lista = [numero]
     while numero != 1 and len(lista) <= 100:
         if is_pari(numero):

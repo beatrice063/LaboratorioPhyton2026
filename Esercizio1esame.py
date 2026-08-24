@@ -1,9 +1,8 @@
-"""
-NOME: Esercizio 1 - Sequenza di Collatz
-AUTORE: Zavattin Beatrice
-VERSIONE: 1.0
-DESCRIZIONE: Genera e analizza sequenze secondo la regola di Collatz
-"""
+
+#NOME: Esercizio1esame.py
+#AUTORE: Zavattin Beatrice
+#VERSIONE: 1.0
+
 
 
 def is_pari(n):
@@ -87,3 +86,4 @@ def main():
 
 
 main()
+

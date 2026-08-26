@@ -1,3 +1,17 @@
+#NOME: Esercizio7
+#AUTORE: Beatrice Zavattin
+#DATA:
+#VERSIONE:
+#DESCRIZIONE:Programma che gioca alla tabellina di un numero scelto dall'utente, usando un generatore per produrre i multipli 
+#uno alla volta.Un loop chiede ripetutamente di indovinare il valore corrente, gestendo con try/except sia input non numerici 
+#sia numeri decimali senza bloccarsi.L'utente può terminare il gioco in qualsiasi momento digitando "ESCI", ricevendo il punteggio 
+#finale.
+
+
+
+
+
+
 def tabellina(n):
     """Generatore infinito: produce i multipli di n (0, n, 2n, 3n, ...)."""
     i = 0

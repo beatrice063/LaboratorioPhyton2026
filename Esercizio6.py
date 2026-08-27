@@ -1,3 +1,11 @@
+#NOME: Esercizio6
+#AUTORE: Beatrice Zavattin
+#DATA: 03/07/2026
+#VERSIONE: 1.0
+#DESCRIZIONE:Trasformare la rubrica dell'Esercizio 3 in una classe Rubrica con 5 metodi (APRI, AGGIUNGI, RIMUOVI, SALVA, STAMPA) e gestione 
+#degli errori, poi usarla in un programma interattivo che chiede l'azione da eseguire finché non si digita "EXIT".
+
+
 # Importa il modulo integrato di Python per gestire i file in formato JSON (JavaScript Object Notation)
 import json
 

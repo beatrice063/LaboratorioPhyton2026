@@ -1,15 +1,11 @@
-#NOME: Esercizio7
+#NOME: Esercizio7.py
 #AUTORE: Beatrice Zavattin
-#DATA:
-#VERSIONE:
+#DATA:25/06/2026
+#VERSIONE:1.0
 #DESCRIZIONE:Programma che gioca alla tabellina di un numero scelto dall'utente, usando un generatore per produrre i multipli 
 #uno alla volta.Un loop chiede ripetutamente di indovinare il valore corrente, gestendo con try/except sia input non numerici 
 #sia numeri decimali senza bloccarsi.L'utente può terminare il gioco in qualsiasi momento digitando "ESCI", ricevendo il punteggio 
 #finale.
-
-
-
-
 
 
 def tabellina(n):

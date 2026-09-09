@@ -2,8 +2,9 @@
 #NOME: Esercizio4
 #AUTORE: Beatrice Zavattin
 #DATA: 20/05/2026
-#VERSIONE:
-#DESCRIZIONE:
+#VERSIONE:1.0
+#DESCRIZIONE:Script Python che gestisce una rubrica di contatti con nome, data di nascita, età, sesso ed email. Permette di stamparla, ordinarla per età, generare messaggi 
+#di auguri e cercarla per chiave, oltre a salvarla/leggerla da file TXT e JSON. Tutte le funzioni si richiamano da riga di comando grazie ad argparse.
 
 
 import argparse

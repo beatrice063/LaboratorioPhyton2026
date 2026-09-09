@@ -1,3 +1,11 @@
+#NOME: Esercizio8_eafp.py
+#AUTORE: Beatrice Zavattin 
+#DATA: 01/08/2026
+#VERSIONE: 1.0
+#DESCRIZIONE: Un gioco dell'impiccato in Python scritto interamente in stile EAFP: usa try/except (invece di if di controllo) per gestire lettura del file JSON, verifica 
+#delle lettere indovinate/tentate e validazione della parola finale. Il giocatore ha 6 tentativi per indovinare la parola scelta a caso, lettera per lettera o tutta intera, 
+#con stato di gioco mostrato a ogni turno tramite funzioni separate per caricamento, visualizzazione e controllo completamento.
+
 import json
 import random
 

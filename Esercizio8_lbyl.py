@@ -1,3 +1,11 @@
+#NOME: Esercizio8_lbyl.py
+#AUTORE: Beatrice Zavattin 
+#DATA: 27/07/2026
+#VERSIONE: 1.0
+#DESCRIZIONE: Versione del gioco dell'impiccato scritta in stile LBYL (Look Before You Leap): ogni situazione a rischio viene verificata preventivamente con if (chiave 
+#presente, lista non vuota, lettera valida, lunghezza corretta) invece di usare try/except. Usa strutture dati più dirette (set invece di dizionari) e aggiunge controlli 
+#in più rispetto alla versione EAFP, come la validazione dei caratteri alfabetici e della lunghezza della parola tentata.
+
 import json
 import random
 

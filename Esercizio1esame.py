@@ -1,8 +1,7 @@
-
 #NOME: Esercizio1esame.py
 #AUTORE: Zavattin Beatrice
 #VERSIONE: 1.0
-#DATA:
+#DATA:22/03/2026
 #DESCRIZIONE:Il programma chiede all'utente quanti numeri interi positivi testare, e per ciascuno genera la sequenza, dimezzando i numeri 
 #pari e applicando 3n+1 ai dispari, fino a raggiungere 1 o un limite di sicurezza di 100 passi. Per ogni sequenza calcola e stampa il valore 
 #massimo raggiunto, la lunghezza, la somma totale e i numeri divisibili per 5. Al termine mostra un riepilogo indicando quale numero di 

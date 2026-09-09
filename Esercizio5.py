@@ -1,9 +1,9 @@
 #
-# File: Otto_regine_completo.py
+# File: Esercizio5.py
 #
-# Author: (basato su E.Romelli, D.Tavagnacco)
+# Author: Beatrice Zavattin (basato su E.Romelli, D.Tavagnacco)
 #
-# Date: 2026/08/25
+# Date: 04/06/2026
 #
 # Version: 1.0
 #

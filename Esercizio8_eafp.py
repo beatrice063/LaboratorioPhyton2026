@@ -7,31 +7,30 @@
 #con stato di gioco mostrato a ogni turno tramite funzioni separate per caricamento, visualizzazione e controllo completamento.
 
 import json
-import random
+import random # generare scelte casuali
 
 FILE_PAROLE = "parole.json"
 TENTATIVI_MAX = 6
 
 
 def carica_parola(percorso):
-    """Carica la lista di parole e ne sceglie una a caso, in stile EAFP:
-    si prova direttamente l'operazione e si gestisce l'eventuale eccezione."""
+    """Carica la lista di parole e ne sceglie una a caso"""
 
     # --- EAFP: lettura del file ---
     try:
         with open(percorso, "r") as file_parole:
-            dati = json.load(file_parole)
+            dati = json.load(file_parole) # legge il contenuto del file e lo converte in una struttura dati Python (dizionario)
     except FileNotFoundError:
         print(f"Errore: il file '{percorso}' non esiste.")
         return None
 
     # --- EAFP: accesso alla chiave "parole" e scelta della parola casuale ---
-    try:
-        lista_parole = dati["parole"]
-        generatore = random.Random()
+    try: 
+        lista_parole = dati["parole"] # accedere alla chiave
+        generatore = random.Random() # crea un'istanza indipendente del generatore di numeri casuali
         indici = list(range(len(lista_parole)))
-        generatore.shuffle(indici)
-        parola = lista_parole[indici[0]]
+        generatore.shuffle(indici) # mescola casualmente
+        parola = lista_parole[indici[0]] # recupera la parola corrispondente
     except KeyError:
         print("Errore: il file JSON non contiene la chiave 'parole'.")
         return None
@@ -43,9 +42,9 @@ def carica_parola(percorso):
 
 
 def mostra_stato(parola, lettere_indovinate, lettere_tentate, tentativi_rimasti):
-    """Visualizza lo stato corrente della partita, in stile EAFP."""
+    """Stato corrente della partita"""
 
-    mascherata = ''
+    mascherata = '' # inizializza una stringa vuota che conterrà la rappresentazione della parola con le lettere indovinate mostrate e le altre nascoste
     for lettera in parola:
         try:
             lettere_indovinate[lettera]
@@ -66,7 +65,7 @@ def mostra_stato(parola, lettere_indovinate, lettere_tentate, tentativi_rimasti)
 
 
 def parola_completata(parola, lettere_indovinate):
-    """Controlla, in stile EAFP, se tutte le lettere sono state indovinate."""
+    """Controlla se tutte le lettere sono state indovinate."""
     completa = True
     for lettera in parola:
         try:
@@ -77,19 +76,18 @@ def parola_completata(parola, lettere_indovinate):
 
 
 def gioca(parola):
-    """Ciclo principale del gioco, scritto in stile EAFP puro."""
+    """Ciclo principale del gioco"""
 
     lettere_indovinate = {}
     lettere_tentate = {}
     tentativi_rimasti = TENTATIVI_MAX
 
-    # Dizionario di appoggio con le lettere realmente presenti nella parola
-    # (stesso pattern EAFP visto in Lezione 12 per contare occorrenze)
+    # dizionario che mappa ogni lettera della parola al numero di volte che compare
     lettere_della_parola = {}
     for lettera in parola:
         try:
             lettere_della_parola[lettera] += 1
-        except KeyError:
+        except KeyError: # chiave non esiste
             lettere_della_parola[lettera] = 1
 
     # Dizionario con un'unica chiave valida: la parola corretta stessa
@@ -105,18 +103,18 @@ def gioca(parola):
 
         scelta = input("Inserisci una lettera o prova l'intera parola: ")
 
-        if len(scelta) == 0:
+        if len(scelta) == 0: # invio senza scrivere nulla
             continue
 
-        if len(scelta) == 1:
+        if len(scelta) == 1: # una lettera
 
-            # --- EAFP: la lettera è già stata tentata? ---
+            # --- la lettera è già stata tentata? ---
             try:
-                lettere_tentate[scelta]
+                lettere_tentate[scelta] # lettera tentata 
             except KeyError:
                 lettere_tentate[scelta] = True
 
-                # --- EAFP: la lettera appartiene alla parola? ---
+                # --- la lettera appartiene alla parola? ---
                 try:
                     lettere_della_parola[scelta]
                 except KeyError:
@@ -129,7 +127,7 @@ def gioca(parola):
                 print(f"Hai già provato la lettera '{scelta}'.")
 
         else:
-            # --- EAFP: la parola inserita è quella corretta? ---
+            # --- la parola inserita è quella corretta? ---
             try:
                 parola_valida[scelta]
             except KeyError:
@@ -143,9 +141,9 @@ def gioca(parola):
 
 
 def main():
-    parola = carica_parola(FILE_PAROLE)
+    parola = carica_parola(FILE_PAROLE) # si sceglie parola per il gioco in maniera casuale
 
-    if parola is not None:
+    if parola is not None: 
         gioca(parola)
     else:
         print("Impossibile avviare il gioco a causa di un errore nel file.")

@@ -1,12 +1,15 @@
-"""
-NOME: lista_spesa.py
-DESCRIZIONE: Gestionale semplice di una lista della spesa.
-             La lista e' rappresentata come una lista di dizionari,
-             ognuno con "nome" e "quantita".
-             Il salvataggio avviene su un file di testo semplice
-             (una riga per prodotto, formato: nome;quantita),
-             NON in formato JSON.
-"""
+
+#NOME: lista_spesa.py
+#AUTORE: Beatrice Zavattin
+#DATA: 05/08/2026
+#Versione: 1.0
+#DESCRIZIONE: Gestionale semplice di una lista della spesa.
+             #La lista e' rappresentata come una lista di dizionari,
+             #ognuno con "nome" e "quantita".
+             #Il salvataggio avviene su un file di testo semplice
+             #(una riga per prodotto, formato: nome;quantita),
+             #NON in formato JSON.
+
 
 NOME_FILE = "lista_spesa.txt"
 
@@ -101,5 +104,4 @@ def main():
             print("Scelta non valida, riprova.\n")
 
 
-if __name__ == "__main__":
-    main()
+main()

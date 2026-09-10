@@ -32,17 +32,15 @@ The water, like a witch's oils,
 Burnt green, and blue and white.
 '''
 
-# Caratteri di punteggiatura da "pulire" ai bordi delle parole
+#da "pulire"
 punteggiatura = ",.;:!?'\""
 
-# Caratteri considerati alfanumerici (niente digitazione automatica: li elenco a mano)
+# Caratteri alfanumerici
 lettere_valide = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 
-#Definisco una funzione che toglie la punteggiatura solo ai bordi di una parola
-#Il primo while sposta inizio in avanti finché il carattere in quella posizione è punteggiatura
-#Il secondo while sposta fine all'indietro finché l'ultimo carattere è punteggiatura
-#ultima str restituisce solo la parte "pulita", usando lo slicing.
+#Definisco una funzione che toglie la punteggiatura solo ai bordi di una parola.
+#inizio, fine, slicing.
 def pulisci_parola(parola):
     """Toglie punteggiatura solo a inizio/fine parola, non nel mezzo."""
     inizio = 0
@@ -181,8 +179,6 @@ for p in tutte_parole:
     if nucleo != '':
         parole_pulite.add(nucleo)
 lista_univoca = list(parole_pulite)
-
-# ordinamento manuale "a bolle" (sort con key non è nella teoria)
 n = len(lista_univoca)
 for i in range(n):
     for j in range(n - i - 1):

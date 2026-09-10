@@ -13,7 +13,7 @@ import json
 # 1. DEFINIZIONE DELLA CLASSE RUBRICA
 
 
-# Definisce la classe "Rubrica", il modello (blueprint) per creare i nostri oggetti rubrica
+# Definisce la classe "Rubrica", nuovo oggetto
 class Rubrica:
     """Una classe per gestire una rubrica telefonica con i dati dei contatti"""
 
@@ -23,11 +23,11 @@ class Rubrica:
         """Inizializza la rubrica con un dizionario"""
         self.contatti = dizionario_iniziale
 
-    @classmethod
+    @classmethod #decoratore che rende il metodo legato alla classe 
     def apri_da_json(cls, nome_file):
         """Inizializza la rubrica leggendo da un file JSON"""
         with open(nome_file, 'r') as f:
-            dati = json.load(f)
+            dati = json.load(f) #legge il contenuto JSON e lo converte in un dizionario Python
         return cls(dati)
 
     @classmethod
@@ -43,7 +43,7 @@ class Rubrica:
                 riga = riga.strip()
                 if len(riga) == 0:
                     continue
-                nome, giorno, mese, anno, età, sesso, mail = riga.split(',')
+                nome, giorno, mese, anno, età, sesso, mail = riga.split(',') # Unpacking multiplo
                 dati[nome] = {'giorno': int(giorno),
                               'mese': mese,
                               'anno': int(anno),
@@ -52,19 +52,19 @@ class Rubrica:
                               'mail': mail}
         return cls(dati)
 
-    def aggiungi(self, nome, dati_contatto):
+    def aggiungi(self, nome, dati_contatto): 
         """Aggiunge un elemento alla rubrica"""
-        if self.contatti is None:
+        if self.contatti is None: # rubrica non inizializzata con nessun dizionario
             print("Prima apri una rubrica")
             return
         self.contatti[nome] = dati_contatto
 
     def rimuovi(self, nome):
         """Rimuove un elemento dalla rubrica dato il nome"""
-        if self.contatti is None or self.contatti == {}:
+        if self.contatti is None or self.contatti == {}: # rubrica non inizializzata o vuota
             print("La rubrica è vuota")
             return
-        if nome not in self.contatti.keys():
+        if nome not in self.contatti.keys(): # verifica se il nome cercato non è tra le chiavi del dizionario
             print(f"Il contatto {nome} non esiste in rubrica")
             return
         del self.contatti[nome]
@@ -78,7 +78,7 @@ class Rubrica:
             print(f"Il contatto {nome} non esiste in rubrica")
             return
 
-        contatto = self.contatti[nome]
+        contatto = self.contatti[nome] # estrae il sotto-dizionario con i dati del contatto specifico
 
         if contatto['sesso'] == 'M':
             desinenza = 'o'
@@ -97,14 +97,14 @@ Ti manderemo gli auguri a {contatto['mail']}"""
             return
 
         parti_nome = nome_file.split('.')
-        estensione = parti_nome[-1]
+        estensione = parti_nome[-1] # capire in che formato salvare
 
         if estensione == 'json':
-            with open(nome_file, 'w') as f:
-                json.dump(self.contatti, f)
+            with open(nome_file, 'w') as f: # sovrascrive completamente il file se esisteva già
+                json.dump(self.contatti, f) # prende l'intero dizionario e lo scrive nel file f 
         else:
             with open(nome_file, 'w') as f:
-                for nome in self.contatti:
+                for nome in self.contatti: # itera sulle chiavi del dizionario 
                     contatto = self.contatti[nome]
                     riga = f"{nome},{contatto['giorno']},{contatto['mese']},{contatto['anno']},{contatto['età']},{contatto['sesso']},{contatto['mail']}\n"
                     f.write(riga)
@@ -117,11 +117,12 @@ dati_rubrica = {
   'Ramona Flowers': {'giorno': 19, 'mese': 'ottobre', 'anno': 2004, 'età': 22, 'sesso': 'F', 'mail': 'ramona.fls@gmail.com'},
   'Madoka Ayukawa': {'giorno': 25, 'mese': 'maggio', 'anno': 1969, 'età': 57, 'sesso': 'F', 'mail': 'madoka_sax@asahi_net.jp'}
 }
+# dizionario pronto all'uso
 
 rubrica = Rubrica(None)
 
 while True:
-    azione = input("\nInserisci l'azione (APRI, AGGIUNGI, RIMUOVI, SALVA, STAMPA) o 'EXIT': ").strip().upper()
+    azione = input("\nInserisci l'azione (APRI, AGGIUNGI, RIMUOVI, SALVA, STAMPA) o 'EXIT': ").strip().upper() # non cambia come utente scrive la scelta 
 
     if azione == "EXIT":
         print("Programma terminato.")

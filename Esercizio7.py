@@ -22,7 +22,7 @@ print("Benvenuto nel gioco delle tabelline!")
 
 # Chiediamo il numero della tabellina, gestendo eventuali errori di input
 while True:
-    scelta = input("Con quale numero vuoi giocare alla tabellina? ")
+    scelta = input("Con quale numero vuoi giocare alla tabellina? ") # variabile 
     try:
         numero = int(scelta)
         break
@@ -37,7 +37,7 @@ gioco_attivo = True
 print("Digita 'ESCI' in qualsiasi momento per terminare il gioco.\n")
 
 while gioco_attivo:
-    valore_corretto = next(gen)
+    valore_corretto = next(gen) # chiede al generatore il prossimo valore in sequenza 
     domanda_moltiplicatore = moltiplicatore
     risposta_valida = False
 

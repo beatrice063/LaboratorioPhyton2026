@@ -69,10 +69,12 @@ def ruota_90(soluzione):
     '''PUNTO 7: ruota di 90 gradi (in senso orario) la soluzione data,
        ritornando la nuova lista-permutazione
     '''
-    n = len(soluzione)
-    nuova_soluzione = list(range(n))
+    n = len(soluzione) #numero di regine/righe/colonne della scacchiera (n x n)
+    nuova_soluzione = list(range(n)) # lista "vuota" della stessa lunghezza, i valori iniziali verranno tutti sovrascritti
     for riga in range(n):
-        colonna = soluzione[riga]
+        colonna = soluzione[riga] # colonna della regina che si trova nella riga corrente (scacchiera originale)
+        # ruotando di 90° orario: (riga, colonna) -> (colonna, n-1-riga)
+        # quindi la vecchia colonna diventa la nuova riga, e la nuova colonna e' n-1-riga
         nuova_soluzione[colonna] = n - 1 - riga
     return nuova_soluzione
 
@@ -110,7 +112,7 @@ def punto1_dieci_soluzioni_tempo_medio(random_generator):
     '''
     print('=== Punto 1: 10 soluzioni e tempo medio ===')
 
-    scacchiera = list(range(8))
+    scacchiera = list(range(8)) #permutazione di partenza
     numero_soluzioni_richieste = 10
     solutions = 0
     tempo_totale = 0
@@ -121,18 +123,18 @@ def punto1_dieci_soluzioni_tempo_medio(random_generator):
 
         trovata = False
         while not trovata:
-            random_generator.shuffle(scacchiera)
+            random_generator.shuffle(scacchiera) #mescola casualmente gli elementi della lista
             if soluzione_ok(scacchiera):
                 trovata = True
 
         # PUNTO 1: calcolo il tempo impiegato e lo accumulo per la media finale
-        tempo_impiegato = time.time() - start_time
+        tempo_impiegato = time.time() - start_time #secondi sono passati tra l'inizio della ricerca e il momento in cui si è trovata la soluzione
         tempo_totale += tempo_impiegato
         solutions += 1
         print(f'Found solution {scacchiera} in {tempo_impiegato} s.')
 
     # PUNTO 1: tempo medio = tempo totale diviso il numero di soluzioni trovate
-    tempo_medio = tempo_totale / numero_soluzioni_richieste
+    tempo_medio = tempo_totale / numero_soluzioni_richieste #calcola la media aritmetica del tempo impiegato per trovare una soluzione
     print(f'Tempo totale: {tempo_totale} s.')
     print(f'Tempo medio per trovare una soluzione: {tempo_medio} s.')
     print()
@@ -157,8 +159,8 @@ def punto2_conta_tentativi(random_generator):
         trovata = False
         while not trovata:
             random_generator.shuffle(scacchiera)
-            tentativi += 1  # PUNTO 2: incremento un tentativo ad ogni shuffle
-            if soluzione_ok(scacchiera):
+            tentativi += 1  #incremento un tentativo ad ogni shuffle
+            if soluzione_ok(scacchiera): #controlla se questa disposizione casuale è priva di conflitti diagonali
                 trovata = True
 
         solutions += 1
@@ -190,7 +192,7 @@ def punto3_soluzioni_uniche(random_generator):
 
         # PUNTO 3: accetto la soluzione solo se non è già nella lista
         if scacchiera not in lista_soluzioni_uniche:
-            lista_soluzioni_uniche.append(scacchiera[:])
+            lista_soluzioni_uniche.append(scacchiera[:]) #copia della lista (slice completo)
             print(f'Found solution {scacchiera}')
 
     print()
@@ -224,7 +226,7 @@ def punto4_conta_ripetizioni(random_generator):
 
         # PUNTO 4: converto in tupla e aggiorno il conteggio
         chiave = tuple(scacchiera)
-        if chiave in conteggio_soluzioni.keys():
+        if chiave in conteggio_soluzioni.keys(): #controlla se questa soluzione (come tupla) è già stata incontrata prima
             conteggio_soluzioni[chiave] += 1
         else:
             conteggio_soluzioni[chiave] = 1
@@ -256,7 +258,7 @@ def punto5_scacchiera_NxN(random_generator):
 
     tentativi = 0
     solutions = 0
-    while solutions < 1:
+    while solutions < 1: #continua finché non si è trovata almeno una soluzione
         random_generator.shuffle(scacchiera)
         tentativi += 1
         if soluzione_ok(scacchiera):
@@ -273,16 +275,14 @@ def punto6_n_massimo_15_secondi(random_generator):
     '''
     print('=== Punto 6: N massimo risolvibile in meno di 15s ===')
 
-    limite_tempo = 15  # secondi
+    limite_tempo = 15  
     n = 4              # con 2 e 3 non esistono soluzioni al problema
     n_massimo_riuscito = 0
-    continua = True
+    continua = True # diventerà False non appena si fallisce a trovare una soluzione entro il tempo limite per un certo N
 
     while continua:
         scacchiera = list(range(n))
-        # PUNTO 6: parte il cronometro per il tentativo con questo N
-        start_time = time.time()
-
+        start_time = time.time() # parte il cronometro per il tentativo con questo N
         solutions = 0
         while solutions < 1:
             random_generator.shuffle(scacchiera)
@@ -296,10 +296,10 @@ def punto6_n_massimo_15_secondi(random_generator):
                 n += 1
 
             # PUNTO 6: se supero i 15 secondi senza trovare nulla, mi fermo
-            if time.time() - start_time >= limite_tempo:
+            if time.time() - start_time >= limite_tempo: 
                 break
 
-        if solutions == 0:
+        if solutions == 0: # N corrente è troppo grande per essere risolto casualmente entro 15 secondi
             print(f'N = {n}: nessuna soluzione trovata entro {limite_tempo} s. (fermato)')
             continua = False
 
@@ -318,8 +318,8 @@ def punto7_simmetrie_rotazione(lista_soluzioni_uniche):
 
     numero_da_mostrare = 5
     for i in range(numero_da_mostrare):
-        # PUNTO 7: riuso le soluzioni uniche già trovate al PUNTO 3
-        soluzione = lista_soluzioni_uniche[i]
+        # PUNTO 7: soluzioni uniche del PUNTO 3
+        soluzione = lista_soluzioni_uniche[i] #Estrae la soluzione i-esima dalla lista passata come argomento della funzione
 
         # PUNTO 7: applico le tre funzioni di rotazione definite sopra
         s90 = ruota_90(soluzione)

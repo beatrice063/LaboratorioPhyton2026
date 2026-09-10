@@ -36,7 +36,7 @@ def stampa_dizionario():
         print(riga)
 
 
-# ---------- Funzione di supporto per punti 2 e 3 (selection sort manuale) ----------
+# ---------- Funzione di supporto per punti 2 e 3  ----------
 def ordina_per_eta():
     nomi_lista = []
     eta_lista = []

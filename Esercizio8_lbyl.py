@@ -17,9 +17,7 @@ ALFABETO = "abcdefghijklmnopqrstuvwxyz"
 def carica_parola(percorso):
     """Carica la lista di parole dal file JSON e ne sceglie una a caso."""
 
-    # Apertura del file: la teoria fornita non offre un modo LBYL per
-    # verificarne l'esistenza prima di aprirlo (richiederebbe try/except,
-    # tecnica EAFP), quindi si assume che il file esista.
+    # Si assume che il file esista.
     with open(percorso, "r") as file_parole:
         dati = json.load(file_parole)
 
@@ -35,12 +33,10 @@ def carica_parola(percorso):
         print("Errore: la lista delle parole è vuota.")
         return None
 
-    # Scelta della parola casuale: stesso pattern usato per le 8 Regine
-    # (Lezione 7) e ripreso in Lezione 9 per l'uso del modulo random.
-    generatore = random.Random()
+    generatore = random.Random() # scelta della parola casuale 
     indici = list(range(len(lista_parole)))
     generatore.shuffle(indici)
-    parola = lista_parole[indici[0]]
+    parola = lista_parole[indici[0]] # prende il primo indice della lista mescolata
 
     return parola
 
@@ -79,7 +75,6 @@ def parola_completata(parola, lettere_indovinate):
 
 
 def gioca(parola):
-    """Gestisce il ciclo di gioco applicando rigorosamente controlli LBYL."""
 
     lettere_indovinate = set()
     lettere_tentate = set()

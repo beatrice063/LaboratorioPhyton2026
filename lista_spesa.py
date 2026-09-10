@@ -74,6 +74,7 @@ def mostra_menu():
     print("2 - Rimuovi prodotto")
     print("3 - Mostra lista")
     print("4 - Salva ed esci")
+    print("5 - Esci senza salvare")
 
 
 def main():
@@ -98,6 +99,10 @@ def main():
         elif scelta == "4":
             salva_su_file(lista_spesa, NOME_FILE)
             print("Alla prossima spesa!")
+            break
+
+        elif scelta == "5":
+            print("Uscita senza salvare. Alla prossima spesa!")
             break
 
         else:

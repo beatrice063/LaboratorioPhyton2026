@@ -1,15 +1,11 @@
 #
 # File: Esercizio5.py
-#
-# Author: Beatrice Zavattin (basato su E.Romelli, D.Tavagnacco)
-#
+# Author: Beatrice Zavattin 
 # Date: 04/06/2026
-#
 # Version: 1.0
-#
 # Description: Esercizio completo sul problema delle 8 regine con
 #              approccio brute force + permutazioni casuali.
-#              Unisce in un unico programma tutti i 7 punti dell'Esercizio 5:
+#              Esercizio 5:
 #              PUNTO 1) 10 soluzioni e tempo medio
 #              PUNTO 2) conteggio tentativi per ogni soluzione
 #              PUNTO 3) soluzioni "uniche" (nessuna ripetuta)

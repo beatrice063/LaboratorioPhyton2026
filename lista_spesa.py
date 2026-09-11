@@ -7,8 +7,7 @@
              #La lista e' rappresentata come una lista di dizionari,
              #ognuno con "nome" e "quantita".
              #Il salvataggio avviene su un file di testo semplice
-             #(una riga per prodotto, formato: nome;quantita),
-             #NON in formato JSON.
+             #(una riga per prodotto, formato: nome;quantita).
 
 
 NOME_FILE = "lista_spesa.txt"
@@ -44,9 +43,9 @@ def stampa_lista(lista):
 
 def salva_su_file(lista, nome_file):
     """Salva la lista su un file di testo, una riga per prodotto."""
-    with open(nome_file, "w") as file_out:
+    with open(nome_file, "w") as file_out: # context manager
         for prodotto in lista:
-            file_out.write(f"{prodotto['nome']};{prodotto['quantita']}\n")
+            file_out.write(f"{prodotto['nome']};{prodotto['quantita']}\n") # Scrive una riga nel file per ogni prodotto.
     print(f"Lista salvata su '{nome_file}'.")
 
 
@@ -58,7 +57,7 @@ def carica_da_file(nome_file):
             for riga in file_in:
                 riga = riga.strip()
                 if len(riga) == 0:
-                    continue
+                    continue # passa all'iterazione successiva senza processarla
                 nome, quantita = riga.split(";")
                 lista.append({"nome": nome, "quantita": quantita})
         print(f"Lista caricata da '{nome_file}'.")

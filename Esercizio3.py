@@ -37,8 +37,7 @@ def punto1():
 
 
 # ---------- PUNTO 2 ----------
-# Restituisce le due liste ordinate (nomi, eta) invece di stamparle soltanto,
-# così possiamo riusarle anche nel punto 3 senza ricalcolare l'ordinamento.
+# Restituisce le due liste ordinate (nomi, eta).
 def ordina_per_eta():
     nomi = []
     eta = []
@@ -68,8 +67,6 @@ def punto2():
 def punto3():
     nomi, eta = ordina_per_eta()
     # invertiamo l'ordine "a mano" scorrendo dall'ultimo indice al primo
-    # (evitiamo lo slicing con step [::-1], non trattato a lezione:
-    # usiamo solo range() e indicizzazione, visti in Lezione 2 e 4)
     n = len(eta)
     eta_inv = []
     nomi_inv = []
@@ -81,7 +78,7 @@ def punto3():
         print(nome)
 
 
-# ---------- PUNTO 4 ----------
+# ---------- PUNTO 4: Messaggio di auguri ----------
 def auguri(nome):
     info = rubrica[nome]
     if info['sesso'] == 'M':
@@ -102,9 +99,6 @@ def punto4():
 # ---------- PUNTO 5 ----------
 def punto5(chiave):
     # validazione manuale della chiave con 'in' su una lista
-    # (evitiamo choices=[...] di argparse, non trattato a lezione;
-    # lo stesso pattern "if x in lista" si trova nell'esempio EAFP/LBYL
-    # della Lezione 12: "if c in dizionario.keys():")
     chiavi_valide = ['giorno', 'mese', 'anno', 'età', 'sesso', 'mail']
     if chiave not in chiavi_valide:
         print(f"'{chiave}' non è una chiave valida.")
@@ -115,17 +109,13 @@ def punto5(chiave):
 
 # ---------- MAIN CON ARGPARSE ----------
 def main():
-    parser = argparse.ArgumentParser(description="Esercizio rubrica")
+    parser = argparse.ArgumentParser(description="Esercizio rubrica") # crea oggetto che gestirà argomenti
 
     # punto 5: chiave generica passata come opzione
-    # (niente choices=[...]: non è trattato a lezione, la validazione
-    # è fatta "a mano" dentro punto5())
     parser.add_argument('--chiave',
-                         help="Mostra il valore di questa chiave per tutti i membri della rubrica (punto 5)")
+                         help="Mostra il valore di questa chiave per tutti i membri della rubrica (punto 5)") # registra parametro atteso, stampa descrizione di parametri attesi
 
     # punto 6: nome singolo per gli auguri
-    # (niente type=str: senza indicazioni argparse tratta comunque
-    # l'argomento come stringa di default)
     parser.add_argument('--nome',
                          help="Mostra il messaggio di auguri solo per il nome indicato (punto 6)")
 
@@ -135,7 +125,7 @@ def main():
     parser.add_argument('--lista_invertita', action='store_true', help="Esegue il punto 3")
     parser.add_argument('--auguri', action='store_true', help="Esegue il punto 4 (per tutti)")
 
-    args = parser.parse_args()
+    args = parser.parse_args() # legge argomenti effettivamente passati e li restituisce come attributi di un oggetto
 
     if args.stampa_dizionario:
         punto1()
@@ -159,5 +149,4 @@ def main():
             print(f"'{args.nome}' non è presente in rubrica.")
 
 
-if __name__ == '__main__':
-    main()
+main()

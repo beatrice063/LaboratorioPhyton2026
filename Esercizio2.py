@@ -8,8 +8,6 @@
 #Applica stringhe, liste, set, dizionari e funzioni usando solo tecniche di base. 
 
 
-
-
 testo = '''
 Day after day, day after day,
 We stuck, nor breath nor motion;
@@ -32,7 +30,7 @@ The water, like a witch's oils,
 Burnt green, and blue and white.
 '''
 
-#da "pulire"
+#da pulire
 punteggiatura = ",.;:!?'\""
 
 # Caratteri alfanumerici
@@ -45,7 +43,7 @@ def pulisci_parola(parola):
     """Toglie punteggiatura solo a inizio/fine parola, non nel mezzo."""
     inizio = 0
     fine = len(parola)
-    while inizio < fine and parola[inizio] in punteggiatura: 
+    while inizio < fine and parola[inizio] in punteggiatura: # indicizzazione su una stringa
         inizio += 1
     while fine > inizio and parola[fine - 1] in punteggiatura:
         fine -= 1
@@ -100,12 +98,12 @@ for riga in righe5:
         else:
             parola_nuova = parola
         parole_nuove.append(parola_nuova)
-    righe5_nuove.append(' '.join(parole_nuove))
+    righe5_nuove.append(' '.join(parole_nuove)) # riunisce in un'unica stringa separandole con uno spazio singolo
 testo5 = '\n'.join(righe5_nuove)
 print("5) Testo con sostituzioni:")
 print(testo5)
 
-# ---------- 6. Parole in posizione dispari in maiuscolo ----------
+# ---------- 6. Parole dispari in maiuscolo ----------
 righe6 = testo.split('\n')
 posizione = 0
 righe6_nuove = []
@@ -114,7 +112,7 @@ for riga in righe6:
     parole_nuove = []
     for parola in parole_riga:
         posizione += 1
-        if posizione % 2 != 0:      # posizione dispari (1, 3, 5, ...)
+        if posizione % 2 != 0:      
             parole_nuove.append(parola.upper())
         else:
             parole_nuove.append(parola)
@@ -123,7 +121,7 @@ testo6 = '\n'.join(righe6_nuove)
 print("6) Testo con parole dispari maiuscole:")
 print(testo6)
 
-# ---------- 7. Testo con le righe invertite dal basso verso l'alto ----------
+# ---------- 7. Righe invertite dal basso verso l'alto ----------
 righe7 = testo.split('\n')
 righe7_invertite = []
 for i in range(len(righe7) - 1, -1, -1):     # range con step negativo
@@ -158,6 +156,9 @@ print(testo8)
 strofe9 = testo.split('\n\n')
 insiemi_strofe = []
 for strofa in strofe9:
+    strofa = strofa.strip()
+    if strofa == '':
+        continue
     parole_strofa = strofa.split()
     insieme = set()
     for p in parole_strofa:
@@ -169,7 +170,9 @@ for strofa in strofe9:
 comuni = insiemi_strofe[0]
 for i in range(1, len(insiemi_strofe)):
     comuni = comuni & insiemi_strofe[i]     # intersezione tra insiemi
-print("9) Parole comuni a tutte le strofe:", comuni)
+
+lista_comuni = sorted(comuni)    # trasforma il set in lista ordinata alfabeticamente
+print("9) Parole comuni a tutte le strofe:", lista_comuni)
 
 # ---------- 10. Lista univoca di parole ordinata per lunghezza ----------
 tutte_parole = testo.split()

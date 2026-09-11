@@ -12,13 +12,18 @@
 import argparse
 
 rubrica = {
-    'Paolino Paperino': {'giorno': 9, 'mese': 'giugno', 'anno': 1934, 'età': 93, 'sesso': 'M', 'mail': 'paolino.paperin0@disney.org'},
-    'Ron Weasley': {'giorno': 1, 'mese': 'marzo', 'anno': 1980, 'età': 46, 'sesso': 'M', 'mail': 'ron_weasley80@hogwards.uk'},
-    'Ramona Flowers': {'giorno': 19, 'mese': 'ottobre', 'anno': 2004, 'età': 22, 'sesso': 'F', 'mail': 'ramona.fls@gmail.com'},
-    'Madoka Ayukawa': {'giorno': 25, 'mese': 'maggio', 'anno': 1969, 'età': 57, 'sesso': 'F', 'mail': 'madoka_sax@asahi_net.jp'}
+    'Paolino Paperino': {'giorno': 9, 'mese': 'giugno', 'anno': 1934, 'età': 93,
+                          'sesso': 'M', 'mail': 'paolino.paperin0@disney.org'},
+    'Ron Weasley': {'giorno': 1, 'mese': 'marzo', 'anno': 1980, 'età': 46,
+                     'sesso': 'M', 'mail': 'ron_weasley80@hogwards.uk'},
+    'Ramona Flowers': {'giorno': 19, 'mese': 'ottobre', 'anno': 2004, 'età': 22,
+                        'sesso': 'F', 'mail': 'ramona.fls@gmail.com'},
+    'Madoka Ayukawa': {'giorno': 25, 'mese': 'maggio', 'anno': 1969, 'età': 57,
+                        'sesso': 'F', 'mail': 'madoka_sax@asahi_net.jp'}
 }
 
 
+# ---------- PUNTO 1 ----------
 def punto1():
     for nome in rubrica:
         riga = f"'{nome}'"
@@ -31,12 +36,16 @@ def punto1():
         print(riga)
 
 
-def punto2():
+# ---------- PUNTO 2 ----------
+# Restituisce le due liste ordinate (nomi, eta) invece di stamparle soltanto,
+# così possiamo riusarle anche nel punto 3 senza ricalcolare l'ordinamento.
+def ordina_per_eta():
     nomi = []
     eta = []
     for nome in rubrica:
         nomi.append(nome)
         eta.append(rubrica[nome]['età'])
+
     for i in range(len(eta)):
         minimo = i
         for j in range(i + 1, len(eta)):
@@ -44,29 +53,35 @@ def punto2():
                 minimo = j
         eta[i], eta[minimo] = eta[minimo], eta[i]
         nomi[i], nomi[minimo] = nomi[minimo], nomi[i]
+
+    return nomi, eta
+
+
+def punto2():
+    nomi, eta = ordina_per_eta()
     print("Età ordinate:", eta)
     for nome in nomi:
         print(nome)
 
 
+# ---------- PUNTO 3 ----------
 def punto3():
-    nomi = []
-    eta = []
-    for nome in rubrica:
-        nomi.append(nome)
-        eta.append(rubrica[nome]['età'])
-    for i in range(len(eta)):
-        minimo = i
-        for j in range(i + 1, len(eta)):
-            if eta[j] < eta[minimo]:
-                minimo = j
-        eta[i], eta[minimo] = eta[minimo], eta[i]
-    invertita = []
-    for i in range(len(eta) - 1, -1, -1):
-        invertita.append(eta[i])
-    print("Età invertite:", invertita)
+    nomi, eta = ordina_per_eta()
+    # invertiamo l'ordine "a mano" scorrendo dall'ultimo indice al primo
+    # (evitiamo lo slicing con step [::-1], non trattato a lezione:
+    # usiamo solo range() e indicizzazione, visti in Lezione 2 e 4)
+    n = len(eta)
+    eta_inv = []
+    nomi_inv = []
+    for i in range(n):
+        eta_inv.append(eta[n - 1 - i])
+        nomi_inv.append(nomi[n - 1 - i])
+    print("Età in ordine decrescente:", eta_inv)
+    for nome in nomi_inv:
+        print(nome)
 
 
+# ---------- PUNTO 4 ----------
 def auguri(nome):
     info = rubrica[nome]
     if info['sesso'] == 'M':
@@ -84,34 +99,65 @@ def punto4():
         auguri(nome)
 
 
+# ---------- PUNTO 5 ----------
 def punto5(chiave):
+    # validazione manuale della chiave con 'in' su una lista
+    # (evitiamo choices=[...] di argparse, non trattato a lezione;
+    # lo stesso pattern "if x in lista" si trova nell'esempio EAFP/LBYL
+    # della Lezione 12: "if c in dizionario.keys():")
+    chiavi_valide = ['giorno', 'mese', 'anno', 'età', 'sesso', 'mail']
+    if chiave not in chiavi_valide:
+        print(f"'{chiave}' non è una chiave valida.")
+        return
     for nome in rubrica:
-        print(rubrica[nome][chiave])
+        print(f"'{nome}': {rubrica[nome][chiave]}")
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--stampa', action='store_true')
-parser.add_argument('--ordina', action='store_true')
-parser.add_argument('--inverti', action='store_true')
-parser.add_argument('--auguri', action='store_true')
-parser.add_argument('-k', '--chiave')
-parser.add_argument('-n', '--nome')
-args = parser.parse_args()
+# ---------- MAIN CON ARGPARSE ----------
+def main():
+    parser = argparse.ArgumentParser(description="Esercizio rubrica")
 
-if args.stampa:
-    punto1()
+    # punto 5: chiave generica passata come opzione
+    # (niente choices=[...]: non è trattato a lezione, la validazione
+    # è fatta "a mano" dentro punto5())
+    parser.add_argument('--chiave',
+                         help="Mostra il valore di questa chiave per tutti i membri della rubrica (punto 5)")
 
-if args.ordina:
-    punto2()
+    # punto 6: nome singolo per gli auguri
+    # (niente type=str: senza indicazioni argparse tratta comunque
+    # l'argomento come stringa di default)
+    parser.add_argument('--nome',
+                         help="Mostra il messaggio di auguri solo per il nome indicato (punto 6)")
 
-if args.inverti:
-    punto3()
+    # punto 7: opzioni per eseguire i singoli punti dell'esercizio
+    parser.add_argument('--stampa_dizionario', action='store_true', help="Esegue il punto 1")
+    parser.add_argument('--lista_ordinata', action='store_true', help="Esegue il punto 2")
+    parser.add_argument('--lista_invertita', action='store_true', help="Esegue il punto 3")
+    parser.add_argument('--auguri', action='store_true', help="Esegue il punto 4 (per tutti)")
 
-if args.auguri:
-    punto4()
+    args = parser.parse_args()
 
-if args.chiave:
-    punto5(args.chiave)
+    if args.stampa_dizionario:
+        punto1()
 
-if args.nome:
-    auguri(args.nome)
+    if args.lista_ordinata:
+        punto2()
+
+    if args.lista_invertita:
+        punto3()
+
+    if args.auguri:
+        punto4()
+
+    if args.chiave:
+        punto5(args.chiave)
+
+    if args.nome:
+        if args.nome in rubrica:
+            auguri(args.nome)
+        else:
+            print(f"'{args.nome}' non è presente in rubrica.")
+
+
+if __name__ == '__main__':
+    main()

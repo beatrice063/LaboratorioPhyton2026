@@ -199,3 +199,8 @@ if args.leggi_json:
 
 if args.file_rubrica:
     gestisci_file()
+
+
+
+
+# --stampa_dizionario --lista_ordinata --lista_invertita --auguri -k mail -n "Ramona Flowers" --salva_txt --salva_json --leggi_json --file_rubrica
